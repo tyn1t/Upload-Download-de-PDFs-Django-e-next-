@@ -11,7 +11,6 @@ class FileViewSet(viewsets.ModelViewSet):
         
     def perform_create(self, serializer):             
         file = self.request.FILES.get('pdf')
-        print(file.size)
         serializer.save(name=file.name)
         
     # @action(detail=True, methods=['get'])
