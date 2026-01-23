@@ -2,6 +2,7 @@ from rest_framework import serializers
 from .models import Files
 
 class FileSerializer(serializers.ModelSerializer):
+
     
     def validate_pdf(self, value):
         if not value.name.lower().endswith('.pdf'):
